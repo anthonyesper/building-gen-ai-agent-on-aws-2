@@ -144,7 +144,7 @@ class CodeGenerationTool(Tool):
     outputs = ["text"]
 
     def call_endpoint(self, payload):
-        API_URL = "https://api-inference.huggingface.co/models/bigcode/starcoder"
+        API_URL = "https://api-inference.huggingface.co/models/bigcode/starcoder2-3b"
         headers = {"Authorization": f"Bearer {HUGGING_FACE_KEY}"}
         response = requests.post(API_URL, headers=headers, json=payload)
         return response.json()
@@ -256,7 +256,7 @@ class DiagramCreationTool(Tool):
 
     def call_endpoint(self, payload):
         headers = {"Authorization": f"Bearer {HUGGING_FACE_KEY}"}
-        API_URL = "https://api-inference.huggingface.co/models/bigcode/starcoder"
+        API_URL = "https://api-inference.huggingface.co/models/bigcode/starcoder2-3b"
         response = requests.post(API_URL, headers=headers, json=payload)
         return response.json()
 
@@ -291,7 +291,7 @@ class DiagramCreationTool(Tool):
 
 
 def start_agent(
-    model_endpoint="https://api-inference.huggingface.co/models/bigcode/starcoderbase",
+    model_endpoint="https://api-inference.huggingface.co/models/bigcode/starcoder2-3b",
 ):
     # Start tools
     well_arch_tool = AWSWellArchTool()

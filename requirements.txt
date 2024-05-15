@@ -7,3 +7,5 @@ faiss-cpu
 diagrams
 graphviz
 torch
+streamlit
+boto3
