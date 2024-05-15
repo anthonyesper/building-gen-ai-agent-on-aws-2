@@ -11,7 +11,8 @@ from langchain.llms.sagemaker_endpoint import LLMContentHandler
 from langchain.prompts.prompt import PromptTemplate
 from langchain.vectorstores import FAISS
 from PIL import Image
-from transformers import Tool, HfAgent
+from transformers import Tool
+from transformers import HfAgent
 from ai21 import AI21Client
 from ai21.models.chat import ChatMessage
 
