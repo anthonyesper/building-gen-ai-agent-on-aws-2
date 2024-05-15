@@ -9,3 +9,5 @@ graphviz
 torch
 streamlit
 boto3
+ai21
+transformers[agents]
