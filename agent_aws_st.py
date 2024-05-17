@@ -3,9 +3,13 @@ import PIL
 import streamlit as st
 
 import agent_setup
-
+import sys
+print(sys.path)
+print("Available in agent_setup:", dir(agent_setup))
 
 @st.cache_resource
+
+
 def load_agent():
     """
     Load the agent
